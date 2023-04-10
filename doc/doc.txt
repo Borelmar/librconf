@@ -1,0 +1,65 @@
+
+SYNOPSIS:
+	#include <librconf.h>
+	
+	int init_rconf(const char *file);
+
+	int free_rconf(void);
+
+	char *read_rconf(const char *key);
+
+
+DESCRIPTION:
+	This lib provide a lightweight functions
+	for read config file.
+
+
+CONFIG FILE SYNTAX:
+	Comments '/* comment */'
+	Config loss 'key = value;'
+	beetwen 'key', '=', 'value', comments
+	and ';' can have a any chars, except
+	a [0-9, A-z].
+
+
+FUNCTIONS:
+	+-----------------------------------+
+	| int init_rconf(const char *file); |
+	+-----------------------------------+
+	DESCRIPTION:
+		This function reading and store
+		a data from config file.
+		file is a path to file param for
+		example: './foo/bar.txt'.
+	RETURN:
+		If have a error the reading open
+		config file, func return RCONF_ER_CONF_FILE,
+		if have a error the syntax in config file,
+		func return a RCONF_ER_SYNTAX.
+		And return 0 if initialize be success.
+
+	+-----------------------+
+	| int free_rconf(void); |
+	+-----------------------+
+	DESCRIPTION:
+		This function free all data from the
+		general structure.
+	RETURN:
+		Returned 0 if have success.
+
+	+------------------------------------+
+	| char *read_rconf(const char *key); |
+	+------------------------------------+
+	DESCRIPTION:
+		This function reading a value of key
+		from general structure.
+	RETURN:
+		If key found, it return a pointer to
+		string of value on heap, else return NULL.
+
+ERROR MARCOS:
+	RCONF_ER_INIT
+	RCONF_ER_CONF_FILE
+	RCONF_ER_SYNTAX
+	RCONF_ER_KEY_SIZE
+	RCONF_ER_VAL_SIZE

@@ -1,0 +1,13 @@
+#ifndef __RCONF_H
+#define __RCONF_H
+
+#define RCONF_ER_INIT		0x1000
+#define RCONF_ER_SYNTAX		0x1001
+#define RCONF_ER_KEY_SIZE	0x1002
+#define RCONF_ER_VAL_SIZE	0x1003
+#define RCONF_ER_CONF_FILE	0x1004
+
+#define RCONF_KEY_MAX_SIZE 64
+#define RCONF_VAL_MAX_SIZE 64
+
+#endif /* __RCONF_H */

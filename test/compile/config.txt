@@ -1,0 +1,6 @@
+
+/* config */
+opt1 = h4xor;
+opt2 = 1337;
+opt3 = m4n;
+

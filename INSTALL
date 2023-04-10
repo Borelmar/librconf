@@ -1,0 +1,9 @@
+
+INSTALL:
+	[INFO] Makefile have functional only for install shared lib.
+	Command for install into your linux system.
+	+----------------------------+
+	| [sudo] make install_shared |
+	+----------------------------+
+	Need the permitions for write to dir /usr/lib/ and /usr/include/
+
